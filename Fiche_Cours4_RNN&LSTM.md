@@ -97,9 +97,7 @@ hₜ = oₜ * tanh(cₜ)
 ![image](https://github.com/user-attachments/assets/46e4eb50-15e4-436b-978f-48ec45a5e089)
 
 ## 🧠 Résumé visuel – Fonctionnement du LSTM
-vbnet
-Copier
-Modifier
+
        Entrée xₜ
            ↓
      ┌────────────┐
