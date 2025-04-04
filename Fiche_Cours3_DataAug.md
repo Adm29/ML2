@@ -1,4 +1,5 @@
 # 🧠 Fiche de Cours – Data Augmentation et CNN
+
 ## 🔁 1. ImageDataGenerator (Keras)
 Classe Keras permettant de :
 
@@ -17,7 +18,7 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 datagen = ImageDataGenerator(rescale=1.0/255, validation_split=0.2)
 Sans rescale, les pixels sont entre 0 et 255 → apprentissage moins efficace
 
-📁 2. flow_from_directory
+## 📁 2. flow_from_directory
 Permet de :
 
 Charger les images depuis des dossiers
@@ -47,7 +48,8 @@ train_generator = datagen.flow_from_directory(
     class_mode='categorical',
     subset='training'
 )
-🧪 3. Data Augmentation
+
+## 🧪 3. Data Augmentation
 Rend le modèle plus robuste et limite le surapprentissage.
 
 📌 Exemple :
@@ -62,7 +64,8 @@ datagen = ImageDataGenerator(
     zoom_range=0.2,
     horizontal_flip=True
 )
-⚫ 4. Images en niveaux de gris (Grayscale)
+
+## ⚫ 4. Images en niveaux de gris (Grayscale)
 Pourquoi ?
 Réduction du nombre de paramètres
 
@@ -86,7 +89,8 @@ python
 Copier
 Modifier
 model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(128, 128, 1)))
-🧱 5. Architecture CNN complète (grayscale)
+
+## 🧱 5. Architecture CNN complète (grayscale)
 python
 Copier
 Modifier
@@ -103,7 +107,8 @@ model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Flatten())
 model.add(Dense(128, activation='relu'))
 model.add(Dense(train_generator.num_classes, activation='softmax'))
-🖼️ 6. Augmentation avec OpenCV
+
+## 🖼️ 6. Augmentation avec OpenCV
 🔧 Fonctions utiles :
 cv2.imread() : charge l'image
 
@@ -117,7 +122,7 @@ cv2.convertScaleAbs() : ajuster contraste/luminosité
 
 cv2.add(image, noise) : bruit gaussien
 
-🤖 7. Génération d’images avec GANs
+## 🤖 7. Génération d’images avec GANs
 ✨ GAN = 2 réseaux :
 Générateur : crée de fausses images à partir de bruit
 
