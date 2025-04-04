@@ -125,7 +125,7 @@ Mise à jour des poids
 
 Répéter pour plusieurs époques
 
-## 13. Optimisation & Régularisation
+## 13. Optimisation de la config ANN
 🔧 Paramètres essentiels :
 
 Taux d’apprentissage α : détermine la vitesse de convergence
@@ -150,3 +150,6 @@ Traitent les données séquentielles (texte, séries temporelles)
 Utilisé en traitement du langage naturel (ex : GPT, BERT)
 
 Repose sur le mécanisme d’attention
+
+![image](https://github.com/user-attachments/assets/4c8ec325-8626-4112-b97e-6bf668c8e5fc)
+
