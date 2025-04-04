@@ -10,9 +10,7 @@ Normaliser les pixels (rescale=1./255)
 Appliquer des transformations aléatoires (data augmentation)
 
 📌 Exemple simple :
-python
-Copier
-Modifier
+
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 datagen = ImageDataGenerator(rescale=1.0/255, validation_split=0.2)
@@ -28,8 +26,7 @@ Associer automatiquement chaque image à sa classe
 Générer des batchs pour optimiser la mémoire
 
 📂 Organisation du dataset :
-Copier
-Modifier
+
 dataset/
 ├── train/
 │   ├── Classe1/
@@ -38,9 +35,7 @@ dataset/
 │   ├── Classe1/
 │   ├── Classe2/
 Exemple :
-python
-Copier
-Modifier
+
 train_generator = datagen.flow_from_directory(
     'dataset/train/',
     target_size=(128, 128),
@@ -53,9 +48,7 @@ train_generator = datagen.flow_from_directory(
 Rend le modèle plus robuste et limite le surapprentissage.
 
 📌 Exemple :
-python
-Copier
-Modifier
+
 datagen = ImageDataGenerator(
     rescale=1./255,
     rotation_range=20,
@@ -72,9 +65,7 @@ Réduction du nombre de paramètres
 Utile si la couleur n'est pas informative
 
 Conversion :
-python
-Copier
-Modifier
+
 datagen = ImageDataGenerator(rescale=1./255, validation_split=0.2)
 
 train_generator = datagen.flow_from_directory(
@@ -85,15 +76,11 @@ train_generator = datagen.flow_from_directory(
     color_mode='grayscale'
 )
 Modification du modèle :
-python
-Copier
-Modifier
+
 model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(128, 128, 1)))
 
 ## 🧱 5. Architecture CNN complète (grayscale)
-python
-Copier
-Modifier
+
 model = Sequential()
 model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(128, 128, 1)))
 model.add(MaxPooling2D(pool_size=(2, 2)))
@@ -129,9 +116,7 @@ Générateur : crée de fausses images à partir de bruit
 Discriminateur : différencie vraies/fausses images
 
 🧬 Exemple de générateur avec Keras :
-python
-Copier
-Modifier
+
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Reshape, Conv2DTranspose
 
