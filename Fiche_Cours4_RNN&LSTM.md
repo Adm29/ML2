@@ -13,7 +13,15 @@ Sortie à chaque étape : dépend de l’entrée actuelle et de la mémoire (ét
 Formule d’actualisation :
 hₜ = f(hₜ₋₁, xₜ)
 
+
+![image](https://github.com/user-attachments/assets/53415810-508e-400e-9804-7696f93cb125)
+
+
 ## 📍 2. Applications typiques
+
+
+![image](https://github.com/user-attachments/assets/c7a6f27e-37d2-4b90-b9be-d45fb040a0d8)
+
 Analyse de sentiments
 
 Traduction automatique
@@ -29,10 +37,19 @@ Lors de l'entraînement par rétropropagation, les gradients deviennent trop pet
 Résultat : le réseau oublie les informations lointaines dans une séquence.
 
 ## 🔐 4. LSTM – Long Short Term Memory
+
+
+![image](https://github.com/user-attachments/assets/3ab28d00-9c09-4fe5-aab1-dafa2047197c)
+
+
 ✅ Solution :
 Une architecture de RNN équipée de portes de contrôle pour gérer la mémoire à long terme.
 
 Ajoute une nouvelle variable mémoire : cₜ (cell state)
+
+
+![image](https://github.com/user-attachments/assets/1ab2c992-a4c3-44a2-bafe-63f2a1047d99)
+
 
 ## 🧱 5. Composants du LSTM
 1. 🧽 Forget Gate (Porte d’oubli)
@@ -44,6 +61,9 @@ python
 Copier
 Modifier
 fₜ = σ(Wf · [hₜ₋₁, xₜ] + bf)
+
+![image](https://github.com/user-attachments/assets/f543f44c-5a14-404b-9bf4-86eeff76f1c2)
+
 2. 🟩 Input Gate (Porte d’entrée)
 Sélectionne quelles nouvelles informations stocker
 
@@ -54,6 +74,9 @@ Copier
 Modifier
 iₜ = σ(Wi · [hₜ₋₁, xₜ] + bi)
 c̃ₜ = tanh(Wc · [hₜ₋₁, xₜ] + bc)
+
+![image](https://github.com/user-attachments/assets/0b24dd0f-9bcf-4eef-ab35-0d45c59d22f8)
+
 3. 🔁 Cell State Update
 Combine les anciennes informations et les nouvelles :
 
@@ -69,6 +92,10 @@ Copier
 Modifier
 oₜ = σ(Wo · [hₜ₋₁, xₜ] + bo)
 hₜ = oₜ * tanh(cₜ)
+
+
+![image](https://github.com/user-attachments/assets/46e4eb50-15e4-436b-978f-48ec45a5e089)
+
 ## 🧠 Résumé visuel – Fonctionnement du LSTM
 vbnet
 Copier
