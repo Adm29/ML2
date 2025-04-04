@@ -1,6 +1,6 @@
 # 🧠 Fiche de Cours : Réseaux de Neurones Convolutifs (CNN)
 ## 📌 Définition générale
-Un ** CNN ** (Convolutional Neural Network) est un réseau de neurones artificiels spécialement conçu pour traiter des données multidimensionnelles comme les images.
+Un **CNN** (Convolutional Neural Network) est un réseau de neurones artificiels spécialement conçu pour traiter des données multidimensionnelles comme les images.
 
 Utilise des couches convolutionnelles pour apprendre des représentations hiérarchiques et spatiales.
 
